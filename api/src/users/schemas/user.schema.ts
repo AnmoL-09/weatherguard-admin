@@ -17,8 +17,11 @@ export class User {
   @Prop()
   picture: string;
 
-  @Prop({ default: 'google' })
-  provider: string;
+@Prop({
+  enum: ['google', 'github'],
+  default: 'google',
+})
+provider: string;
 
   @Prop({
     enum: UserRole,
