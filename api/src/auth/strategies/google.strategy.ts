@@ -19,7 +19,7 @@ export class GoogleStrategy extends PassportStrategy(
         'GOOGLE_CLIENT_SECRET',
       )!,
       callbackURL:
-        'http://localhost:3000/auth/google/callback',
+        configService.get<string>('GOOGLE_CALLBACK_URL') || 'http://localhost:3000/auth/google/callback',
       scope: ['email', 'profile'],
     });
   }

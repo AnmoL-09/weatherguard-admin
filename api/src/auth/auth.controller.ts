@@ -37,8 +37,9 @@ async googleCallback(
   role: result.user.role,
   status: result.user.status,
 });
+  const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
   res.redirect(
-    `http://localhost:5173/auth-success?token=${result.accessToken}&role=${result.user.role}&status=${result.user.status}`,
+    `${frontendUrl}/auth-success?token=${result.accessToken}&role=${result.user.role}&status=${result.user.status}`,
   );
 }
 }
