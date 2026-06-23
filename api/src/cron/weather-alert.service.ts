@@ -11,7 +11,7 @@ export class WeatherAlertService {
     private readonly telegramService: TelegramService,
   ) {}
 
-  @Cron('0 */30 * * * *')
+  @Cron('*/1 * * * *')
   async handleCron() {
     const users =
       await this.usersService.findApprovedUsers();
