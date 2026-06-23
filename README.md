@@ -10,9 +10,9 @@ WeatherGuard is an enterprise-grade weather alert dispatch platform built to dem
 The goal of this project is to build a scalable, secure, and highly maintainable full-stack application. WeatherGuard solves the problem of verifying users before broadcasting potentially sensitive or API-heavy automated alerts. It emphasizes a strict separation of concerns, defensive programming, and a premium user experience.
 
 ## 2. Live Demo
-- **Frontend URL:** `[Insert Production Vercel/Netlify Link]`
-- **Backend URL:** `[Insert Production Render/Railway Link]`
-- **Telegram Bot:** `[Insert Bot Username]`
+- **Frontend URL:** [https://weatherguard-admin-iota.vercel.app/](https://weatherguard-admin-iota.vercel.app/)
+- **Backend URL:** [https://weatherguard-api-bdst.onrender.com](https://weatherguard-api-bdst.onrender.com)
+- **Telegram Bot:** [https://t.me/weatherguard_alert_bot](https://t.me/weatherguard_alert_bot)
 
 ---
 
