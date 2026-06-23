@@ -158,6 +158,7 @@ export class TelegramLinkService {
     return {
       linked: !!user.telegramChatId,
       linkedAt: user.telegramLinkedAt ?? null,
+      status: user.status,
     };
   }
 }
