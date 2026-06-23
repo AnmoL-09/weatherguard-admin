@@ -52,4 +52,48 @@ export class UsersService {
     telegramChatId: { $exists: true },
   });
 }
+
+  async findById(userId: string) {
+    return this.userModel.findById(userId);
+  }
+
+  async setTelegramLinkToken(
+    userId: string,
+    token: string,
+    expiresAt: Date,
+  ) {
+    return this.userModel.findByIdAndUpdate(
+      userId,
+      {
+        telegramLinkToken: token,
+        telegramLinkTokenExpiresAt: expiresAt,
+      },
+      { new: true },
+    );
+  }
+
+  async findByTelegramLinkToken(token: string) {
+    return this.userModel.findOne({
+      telegramLinkToken: token,
+      telegramLinkTokenExpiresAt: { $gt: new Date() },
+    });
+  }
+
+  async linkTelegram(
+    userId: string,
+    chatId: string,
+  ) {
+    return this.userModel.findByIdAndUpdate(
+      userId,
+      {
+        telegramChatId: chatId,
+        telegramLinkedAt: new Date(),
+        $unset: {
+          telegramLinkToken: 1,
+          telegramLinkTokenExpiresAt: 1,
+        },
+      },
+      { new: true },
+    );
+  }
 }

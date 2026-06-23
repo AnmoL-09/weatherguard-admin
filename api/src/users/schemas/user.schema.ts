@@ -37,6 +37,15 @@ provider: string;
 
   @Prop()
   telegramChatId?: string;
+
+  @Prop()
+  telegramLinkedAt?: Date;
+
+  @Prop()
+  telegramLinkToken?: string;
+
+  @Prop()
+  telegramLinkTokenExpiresAt?: Date;
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
