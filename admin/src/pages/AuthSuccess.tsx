@@ -41,9 +41,9 @@ export default function AuthSuccess() {
   }, [navigate, searchParams]);
 
   return (
-    <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center gap-4">
-      <div className="animate-spin-slow w-8 h-8 border-2 border-slate-800 border-t-indigo-500 rounded-full" />
-      <p className="text-slate-500 text-sm animate-fade-in-d1">
+    <div className="min-h-screen bg-[#FEFEFA] flex flex-col items-center justify-center gap-4">
+      <div className="animate-spin-slow w-8 h-8 border-2 border-slate-200 border-t-slate-900 rounded-full" />
+      <p className="text-slate-600 font-medium text-sm animate-fade-in-d1">
         Authenticating...
       </p>
     </div>
