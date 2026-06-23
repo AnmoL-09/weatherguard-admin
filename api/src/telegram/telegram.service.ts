@@ -26,7 +26,7 @@ export class TelegramService {
 ) {
   return this.sendMessage(
     chatId,
-    '✅ Your WeatherGuard access request has been approved!'
+    '✅ WeatherGuard Access Approved\n\nYour account has been approved by an administrator.\n\nYou will now receive scheduled weather alerts.'
   );
 }
 }

@@ -45,4 +45,11 @@ export class UsersService {
       },
     );
   }
+
+  async findApprovedUsers() {
+  return this.userModel.find({
+    status: UserStatus.APPROVED,
+    telegramChatId: { $exists: true },
+  });
+}
 }

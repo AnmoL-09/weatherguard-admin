@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
-
+import { ScheduleModule } from '@nestjs/schedule';
 import { validationSchema } from './config/env.validation';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
@@ -17,6 +17,7 @@ import { CronModule } from './cron/cron.module';
       isGlobal: true,
       validationSchema,
     }),
+    ScheduleModule.forRoot(),
 
     MongooseModule.forRootAsync({
       inject: [ConfigService],
